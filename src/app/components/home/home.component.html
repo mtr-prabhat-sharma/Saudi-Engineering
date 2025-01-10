@@ -1,0 +1,86 @@
+<!-- <section class="hero">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-title>مرحبا بكم في المجلس السعودي للمهندسين</mat-card-title>
+      <mat-card-content>
+        <p>شريكك الموثوق للتميز والابتكار الهندسي.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" routerLink="/services">
+          استكشف خدماتنا
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+   -->
+
+
+   <!-- <div class="container">
+    <mat-toolbar class="header">
+      <img src="assets/sce_logo.png" alt="SCE Logo" class="logo">
+      <h1>مواعيدي القادمة</h1>
+      <div class="header-buttons">
+        <button mat-raised-button color="primary">حجز زيارة جديدة</button>
+        <button mat-raised-button color="accent">الذهاب إلى مواعيدي السابقة</button>
+      </div>
+    </mat-toolbar> -->
+
+    <!-- <div class="appointments-grid">
+      <mat-card *ngFor="let appointment of appointments" class="appointment-card">
+        <mat-card-content class="appointment-info">
+          <p>{{ appointment.time }} <span class="date">بتاريخ {{ appointment.date }}</span> <span class="visit-number">زيارة رقم ({{ appointment.visitNumber }})</span></p>
+          <p>اسم الموظف: {{ appointment.employeeName }}</p>
+          <p>اسم الخدمة: {{ appointment.serviceName }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" class="go-to-session">الذهاب الى الجلسة</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="pagination">
+      <button mat-icon-button><mat-icon>chevron_right</mat-icon></button>
+      <button mat-button class="active">1</button>
+      <button mat-button>2</button>
+      <button mat-button>3</button>
+      <button mat-icon-button><mat-icon>chevron_left</mat-icon></button>
+    </div>
+     <div class="footer-number">
+        <p>&lt;85431&gt;</p>
+    </div>
+  </div> -->
+
+  <div class="container">
+
+    <div class="header">
+      <img src="assets/logo.png" alt="SCE Logo" class="logo">
+      <button mat-raised-button color="primary">حجز زيارة جديدة</button>
+      
+      <div class="header-buttons">
+        <h1 class="heading">مواعيدي القادمة</h1>
+        <img src="assets/sword.png" alt="sword Logo" class="sword">
+      </div>
+    </div>
+
+    <div class="appointments-grid">
+      <mat-card *ngFor="let appointment of appointments" class="appointment-card">
+        <mat-card-content class="appointment-info">
+          <p>{{ appointment.time }} <span class="date">بتاريخ {{ appointment.date }}</span> <span class="visit-number">زيارة رقم ({{ appointment.visitNumber }})</span></p>
+          <p>اسم الموظف: {{ appointment.employeeName }}</p>
+          <p>اسم الخدمة: {{ appointment.serviceName }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" class="go-to-session">الذهاب الى الجلسة</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div class="pagination">
+      <button mat-icon-button><mat-icon>chevron_right</mat-icon></button>
+      <button mat-button class="active">1</button>
+      <button mat-button>2</button>
+      <button mat-button>3</button>
+      <button mat-icon-button><mat-icon>chevron_left</mat-icon></button>
+    </div>
+    <div class="footer-number">
+        <p>&lt;85431&gt;</p>
+    </div>
+  </div>

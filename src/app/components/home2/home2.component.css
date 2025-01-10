@@ -1,0 +1,401 @@
+
+ .steps-background{
+    background-color: #EEF5F9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Evenly space steps */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 25px;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.logo{
+    max-height: 30px;
+    margin-bottom: 5px;
+    position: absolute;
+    left: -10px; /* Adjust for proper alignment */
+    top: 40%; 
+    transform: translateY(-50%);
+}
+.card-title-logo {
+    height: 20px;
+    width: 20px;
+}
+.extra-container {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+   
+    left: 0;
+    background-color: #FFFF;
+}
+.step-circle {
+    width: 50px; /* Adjust size to match the image */
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 3px solid #ddd; /* Default border color */
+  background-color: white; /* Default background */
+  position: relative;
+  z-index: 1;
+  color: #333;
+}
+.card-title-container span {
+    font-size: 16px;
+}
+.step-circle.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    height: 20px;
+    width: 20px;
+    margin-left: 120px;
+}
+
+ .step-circle.completed {
+    background-color: #1f2b40; /* Dark background similar to the image */
+    border-color: #e3a754; /* Golden border */
+    color: #e3a754; /* Golden checkmark color */
+    height: 20px;
+    width: 20px;
+}
+.step-circle.completed::before {
+    content: "✔"; /* Unicode checkmark */
+    font-size: 18px;
+    font-weight: bold;
+    color: #e3a754; /* Golden color for the checkmark */
+  }
+
+.step-label {
+    font-size: 14px;
+    color: #333;
+}
+
+.step-label.completed {
+    font-size: 14px;
+    color: #333;
+    margin-left: 120px;
+}
+
+.step-label.active {
+    font-size: 14px;
+    color: #333;
+    margin-left: 120px;
+}
+
+
+.step-line {
+    width: 48%;
+    height: 2px;
+    background-color: #ddd;
+    position: absolute;
+    top: 33px;
+    right: 274px;
+    z-index: -1;
+}
+.step:first-child .step-line {
+    display: none; /* No line before the first step */
+  }
+  
+  .step:last-child .step-line {
+    display: none; /* No line after the last step */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .steps-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .step-line {
+      width: 2px;
+      height: 50px;
+      margin: 10px auto;
+    }
+  }
+@media (max-width: 600px) {
+    .steps-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .step-line{
+        width: 2px;
+        height: 50px;
+        margin: 10px auto;
+    }
+}
+
+.container {
+    padding: 20px;
+    font-family: sans-serif;
+    text-align: right;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 128px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .schedule-card {
+    width: 90%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .mat-card-content {
+    padding: 15px;  /* Reduce padding */
+  }
+  .schedule-card .mat-card-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .card-title-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: flex-end; /* Align to the end (right in RTL) */
+    flex-direction: row-reverse; /* Reverse the order of items */
+  }
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  .day-column {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      min-height: 100px; /* Important for layout */
+      justify-content: space-between;
+  }
+  .card-title {
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    margin-right: 5px; /* Adjust spacing as needed */
+  }
+  .schedule-card .mat-card-header .mat-card-title {
+      margin-inline-start: auto;
+  }
+  .days-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;  /* Take full width of card */
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0; /* Adjust padding if needed */
+  }
+  .day-name {
+    cursor: pointer;
+    padding-bottom: 5px;
+    font-weight: bold; /* Match image formatting */
+  }
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .day-column {
+    display: grid;
+  /* Option 1: Fixed Height */
+  /* grid-template-rows: repeat(3, 80px); /* Adjust 80px as needed */
+
+  /* Option 2: minmax (Recommended) */
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr)); /* Recommended */
+  gap: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  /* Remove min-height */
+  /* justify-content: flex-start; */ /* Not needed with minmax */
+  align-items: stretch; /* Stretch items to fill the grid cell */
+  }
+
+  .day-column h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .time-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    /* Remove margin-bottom */
+}
+.slot-text {
+    display: flex;
+    flex-direction: column; /* Stack time and status vertically */
+    align-items: center;
+    margin-top: 5px;
+}
+
+.time {
+  font-weight: bold; /* Make time bolder */
+  margin-bottom: 3px; /* Add a little space between time and status */
+}
+.time-slot-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.time-slot-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.available-slot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    height: 90px;
+}
+.unavailable-slot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    height: 90px;
+}
+.available {
+    color: #f39c12;
+    font-size: 0.8em;
+  }
+
+  .not-available, .unavailable {
+    color: gray;
+    font-size: 0.8em;
+  }
+  .available-slot .mat-radio-button .mat-radio-label .mat-radio-container {
+    transform: scale(0.7); /* Adjust the scale value as needed */
+  }
+  
+  /* Optional: Adjust the overall size of the radio button container if needed */
+  .available-slot .mat-radio-button .mat-radio-label {
+    height: 20px; /* Example height adjustment */
+    width: 20px; /* Example width adjustment */
+  }
+  .available-slot .mat-radio-button{
+    margin: 0;
+}
+.available-slot .slot-text{
+    margin-top: 0;
+}  
+/* .mat-radio-button{
+    margin: 0 auto;
+} */
+
+  .mat-radio-button .mat-radio-label{
+      display: block;
+      width: 100%;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  /* Styles for selected/highlighted day */
+  .day-column.selected {
+      background-color: #e0e0e0; /* Light gray background */
+  }
+  /* Styles for selected radio button */
+  .mat-radio-button.mat-radio-checked .mat-radio-outer-circle {
+      border-color: #007bff; /* Blue border */
+  }
+  .mat-radio-button.mat-radio-checked .mat-radio-inner-circle {
+      background-color: #007bff; /* Blue fill */
+  }
+      @media (max-width: 768px) { /* Adjust breakpoint as needed */
+      .days-grid {
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax */
+      }
+  }
+  @media (max-width: 600px) {
+      .days-grid{
+          grid-template-columns: 1fr;
+      }
+  }
+  .days-header{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.day-name{
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+.day-name.active{
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+.days-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 10px;
+}
+.day-column{
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* .day-column.active-column{
+    border: 2px solid #f39c12;
+} */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+.days-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax */
+}
+}
+@media (max-width: 600px) {
+.days-grid{
+    grid-template-columns: 1fr;
+}
+}

@@ -1,0 +1,77 @@
+.container {
+  padding: 20px;
+  margin: 50px;
+  font-family: sans-serif;
+  text-align: right;
+  background-color: #f8f9fa; /* Very light gray background */
+  min-height: calc(100vh - 128px); /* Full viewport height minus header and footer height (adjust 128px as needed)*/
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 9%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #EEF5F9;
+}
+.heading {
+  font-family: 'Cairo', sans-serif;
+}
+.header-buttons{
+    display: flex;
+}
+.header-buttons button{
+    margin-left: 10px;
+}
+.logo {
+  max-height: 50px;
+  margin-right: 20px;
+}
+.sword {
+  width: 45px;
+  height: 45px;
+}
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex-grow: 1; /* Allow grid to take up available space */
+}
+
+.appointment-card {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Reduced shadow */
+  background-color: white;
+  border: 1px solid #ddd; /* Added border */
+}
+
+.appointment-info{
+    margin-bottom: 10px;
+}
+.date, .visit-number{
+    margin: 0 10px;
+    color: gray;
+}
+.go-to-session {
+    width: 100%;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination button {
+    margin: 0 5px;
+}
+.pagination .active {
+    background-color: #eee;
+}
+ .footer-number{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin to bottom */
+}
